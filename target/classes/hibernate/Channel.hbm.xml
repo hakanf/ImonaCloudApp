@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="working.Channel" table="channel" >
+        <id name="channelId" type="java.lang.Integer">
+            <column name="CHANNEL_ID" />
+            <generator class="identity" />
+        </id>
+
+
+
+        <property name="channelName" type="string">
+            <column name="CHANNEL_NAME" length="10" not-null="true" unique="true" />
+        </property>
+        <many-to-one name="customer" class="working.Customer" fetch="select">
+            <column name="CUSTOMER_ID" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="working.Customer" table="customer" >
+        <id name="customerId" type="java.lang.Integer">
+            <column name="CUSTOMER_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="10" not-null="true" unique="true" />
+        </property>
+        <property name="surname" type="string">
+            <column name="SURNAME" length="20" not-null="true" unique="true" />
+        </property>
+        <set name="channels" table="channel"
+             inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="CUSTOMER_ID" not-null="true" />
+            </key>
+            <one-to-many class="working.Channel" />
+        </set>
+    </class>
+</hibernate-mapping>

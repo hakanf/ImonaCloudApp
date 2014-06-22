@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- Customer business object -->
+   <bean id="channelBo" class="working.ChannelBoImpl" >
+   		<property name="channelDao" ref="channelDao" />
+   </bean>
+ 
+   <!-- Customer Data Access Object -->
+   <bean id="channelDao" class="working.ChannelDaoImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+
+    <bean id="channelBoProxy"
+          class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="channelBo" />
+        <property name="interceptorNames">
+            <list>
+                <value>transactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+   
+   		
+</beans>

@@ -1,0 +1,19 @@
+<hibernate-mapping>
+
+    <class name="Address" table="ADDRESS">
+        <id name="id" column="ID">
+            <generator class="increment"/>
+        </id>
+
+        <property name="firstName" column="FIRSTNAME"/>
+        <property name="lastName" column="LASTNAME"/>
+        <property name="street" column="STREET"/>
+        <property name="city" column="CITY"/>
+
+        <set name="documents" inverse="true">
+            <key column="ADDRESSID"/>
+            <one-to-many class="Document"/>
+        </set>
+    </class>
+
+</hibernate-mapping>
