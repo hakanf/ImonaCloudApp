@@ -4,12 +4,12 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<!-- Customer business object -->
-   <bean id="channelBo" class="working.ChannelBoImpl" >
+   <bean id="channelBo" class="CustomerApp.ChannelBoImpl" >
    		<property name="channelDao" ref="channelDao" />
    </bean>
  
    <!-- Customer Data Access Object -->
-   <bean id="channelDao" class="working.ChannelDaoImpl" >
+   <bean id="channelDao" class="CustomerApp.ChannelDaoImpl" >
    		<property name="sessionFactory" ref="sessionFactory"></property>
    </bean>
 

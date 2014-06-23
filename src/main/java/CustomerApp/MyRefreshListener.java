@@ -1,4 +1,4 @@
-package working;
+package CustomerApp;
 
 /**
  * Created with IntelliJ IDEA.
@@ -8,7 +8,6 @@ package working;
  * To change this template use File | Settings | File Templates.
  */
 import com.github.wolfie.refresher.Refresher;
-import com.github.wolfie.refresher.Refresher.RefreshListener;
 
 public class MyRefreshListener implements Refresher.RefreshListener {
     private static final long serialVersionUID = 1L;

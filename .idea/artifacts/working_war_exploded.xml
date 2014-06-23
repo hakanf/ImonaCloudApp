@@ -2,10 +2,10 @@
   <artifact type="exploded-war" name="working:war exploded">
     <output-path>$PROJECT_DIR$/target/working-1.0-SNAPSHOT</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="working/web/Web" />
+      <element id="javaee-facet-resources" facet="ImonaCloudApp/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="working" />
+          <element id="module-output" name="ImonaCloudApp" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.lowagie:itext:2.1.7" />

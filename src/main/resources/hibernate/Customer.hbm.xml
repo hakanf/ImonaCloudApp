@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="working.Customer" table="customer" >
+    <class name="CustomerApp.Customer" table="customer" >
         <id name="customerId" type="java.lang.Integer">
             <column name="CUSTOMER_ID" />
             <generator class="identity" />
@@ -32,7 +32,7 @@
             <key>
                 <column name="CUSTOMER_ID" not-null="true" />
             </key>
-            <one-to-many class="working.Channel" />
+            <one-to-many class="CustomerApp.Channel" />
         </set>
     </class>
 </hibernate-mapping>

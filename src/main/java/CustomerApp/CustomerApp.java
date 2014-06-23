@@ -1,4 +1,4 @@
-package working;
+package CustomerApp;
 
 import javax.servlet.annotation.WebServlet;
 
@@ -37,7 +37,7 @@ public class CustomerApp extends UI
     public PopupView popup;
 
     @WebServlet(value = "/*", asyncSupported = true)
-    @VaadinServletConfiguration(productionMode = false, ui = CustomerApp.class, widgetset = "working.AppWidgetSet")
+    @VaadinServletConfiguration(productionMode = false, ui = CustomerApp.class, widgetset = "CustomerApp.AppWidgetSet")
     public static class Servlet extends VaadinServlet {
     }
 
@@ -299,13 +299,13 @@ public class CustomerApp extends UI
     public void report(String reportType) throws JRException, SQLException, IOException {
         if(full)
             tab3.removeComponent(pdf);
-        working.CustomTableModel model=null;
+        CustomTableModel model=null;
         if(reportType.equals("Male Customers")){
-        List<working.Customer> customers= working.DatabaseTools.findMaleCustomers();
-        model=new working.CustomTableModel(customers,"2"); }
+        List<Customer> customers= DatabaseTools.findMaleCustomers();
+        model=new CustomTableModel(customers,"2"); }
         else if(reportType.equals("Customers of birth city Istanbul"))  {
-            List<working.Customer> customers= working.DatabaseTools.findIstanbulCustomers();
-        model=new working.CustomTableModel(customers,"3"); }
+            List<Customer> customers= DatabaseTools.findIstanbulCustomers();
+        model=new CustomTableModel(customers,"3"); }
 
         FileOutputStream fos = null;
         File tempFile = null;
@@ -316,7 +316,7 @@ public class CustomerApp extends UI
 
 
             String jrxml = "customerreport.jrxml";
-            //String jrxmlPath= "C:/finalbeforetest/lastvers/a/working/src/main/resources/jasperreports/" + jrxml;
+            //String jrxmlPath= "C:/finalbeforetest/lastvers/a/CustomerApp/src/main/resources/jasperreports/" + jrxml;
             String jrxmlPath = new File(".").getCanonicalPath()+"/src/main/resources/jasperreports/"+jrxml;
             String jasperCompile= JasperCompileManager.compileReportToFile(jrxmlPath);
             JasperPrint print = JasperFillManager.fillReport(jasperCompile, null, new JRTableModelDataSource(model));

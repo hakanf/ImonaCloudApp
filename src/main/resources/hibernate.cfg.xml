@@ -13,8 +13,8 @@
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
 
-		<mapping class="working.Customer" />
-        <mapping class="working.Channel" />
+		<mapping class="CustomerApp.Customer" />
+        <mapping class="CustomerApp.Channel" />
 
     </session-factory>
 </hibernate-configuration>

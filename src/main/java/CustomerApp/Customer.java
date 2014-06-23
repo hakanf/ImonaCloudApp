@@ -1,6 +1,5 @@
-package working;
+package CustomerApp;
 
-import java.sql.Time;
 import java.util.*;
 import javax.persistence.*;
 

@@ -1,4 +1,4 @@
-package working;
+package CustomerApp;
 
 /**
  * Created with IntelliJ IDEA.

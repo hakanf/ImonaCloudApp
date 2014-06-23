@@ -1,11 +1,9 @@
-package working;
+package CustomerApp;
 
 import org.hibernate.classic.Session;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import javax.persistence.EntityManager;
-import java.nio.channels.Channels;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;

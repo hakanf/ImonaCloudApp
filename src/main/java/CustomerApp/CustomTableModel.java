@@ -1,4 +1,4 @@
-package working;
+package CustomerApp;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.Collection;

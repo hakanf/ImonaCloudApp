@@ -1,4 +1,4 @@
-package working;
+package CustomerApp;
  
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;

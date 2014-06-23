@@ -1,4 +1,4 @@
-package working;
+package CustomerApp;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,7 +7,6 @@ package working;
  * Time: 3:30 PM
  * To change this template use File | Settings | File Templates.
  */
-import com.vaadin.server.UserError;
 import com.vaadin.ui.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
