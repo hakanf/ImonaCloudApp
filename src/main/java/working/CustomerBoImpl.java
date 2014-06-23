@@ -31,7 +31,13 @@ public class CustomerBoImpl implements CustomerBo {
     }
 
     public List<Customer> find(){
-       return customerDao.findAll();
+        return customerDao.findAll();
+    }
+    public List<Customer> findMaleCustomers(){
+        return customerDao.findMaleCustomers();
+    }
+    public List<Customer> findIstanbulCustomers(){
+        return customerDao.findIstanbulCustomers();
     }
 
     public Customer findByStockCode(String stockCode){

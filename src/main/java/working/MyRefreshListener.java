@@ -10,7 +10,7 @@ package working;
 import com.github.wolfie.refresher.Refresher;
 import com.github.wolfie.refresher.Refresher.RefreshListener;
 
-public class MyRefreshListener implements RefreshListener {
+public class MyRefreshListener implements Refresher.RefreshListener {
     private static final long serialVersionUID = 1L;
     CustomerApp customerApp;
 
@@ -20,7 +20,6 @@ public class MyRefreshListener implements RefreshListener {
     }
 
     public void refresh(final Refresher source) {
-        System.out.println("I am getting refreshed");
         try {
             customerApp.trayMessage() ;
         } catch (InterruptedException e) {

@@ -17,6 +17,9 @@ public interface CustomerBo {
     void update(Customer customer);
     void delete(Customer customer);
     List<Customer> find();
+    List<Customer> findMaleCustomers();
+    List<Customer> findIstanbulCustomers();
+
 
     Customer findByStockCode(String stockCode);
 }

@@ -1,9 +1,7 @@
 package working;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.sql.Time;
+import java.util.*;
 import javax.persistence.*;
 
 import static javax.persistence.GenerationType.IDENTITY;
@@ -17,6 +15,10 @@ public class Customer implements java.io.Serializable {
     private Integer customerId;
     private String name;
     private String surname;
+    private String gender;
+    private String birthDate;
+    private String birthCity;
+    private String activation;
     private Set<Channel> channels = new HashSet<Channel>(
             0);
 
@@ -62,6 +64,46 @@ public class Customer implements java.io.Serializable {
 
     public void setsurname(String surname) {
         this.surname = surname;
+    }
+
+    @Column(name = "GENDER",  nullable = false, length = 10)
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    @Column(name = "BIRTH_DATE",  nullable = false, length = 10)
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    @Column(name = "BIRTH_CITY",  nullable = false, length = 20)
+
+    public String getBirthCity() {
+        return birthCity;
+    }
+
+    public void setBirthCity(String birthCity) {
+        this.birthCity = birthCity;
+    }
+
+    @Column(name = "ACTIVATION",  nullable = false, length = 10)
+
+    public String getActivation() {
+        return activation;
+    }
+
+    public void setActivation(String activation) {
+        this.activation = activation;
     }
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "customer", cascade = CascadeType.ALL)

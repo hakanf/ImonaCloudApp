@@ -11,9 +11,14 @@ import com.vaadin.server.*;
 import com.vaadin.ui.*;
 import com.vaadin.ui.Button.ClickEvent;
 import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRTableModelDataSource;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Collection;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -23,9 +28,12 @@ public class CustomerApp extends UI
 {
     final VerticalLayout tab2 = new VerticalLayout();
     final VerticalLayout tab3 = new VerticalLayout();
+    public boolean full=false;
+    public Embedded pdf=null;
 
-    final Button showbutton = new Button("Show");
-    final Table table = new Table("This is my Table");
+
+    final Button showbutton = new Button("Show Records");
+    final Table table = new Table("Customer Table");
     public PopupView popup;
 
     @WebServlet(value = "/*", asyncSupported = true)
@@ -38,14 +46,12 @@ public class CustomerApp extends UI
         final VerticalLayout layout = new VerticalLayout();
         layout.setMargin(true);
         setContent(layout);
+        Page.getCurrent().setTitle("ImonaCloudApp")  ;
+        Label label = new Label("ImonaCloudApp");
+
+        layout.addComponent(label);
         
-        Button button = new Button("Click Me");
-        button.addClickListener(new Button.ClickListener() {
-            public void buttonClick(ClickEvent event) {
-                layout.addComponent(new Label("Thank you for clicking"));
-            }
-        });
-        layout.addComponent(button);
+
 
         final Refresher refresher = new Refresher();
         refresher.setRefreshInterval(10000);
@@ -56,29 +62,52 @@ public class CustomerApp extends UI
         layout.addComponent(tabsheet);
 // Create the first tab
         VerticalLayout tab1 = new VerticalLayout();
-        tabsheet.addTab(tab1, "Customer Information",
-                new ThemeResource("img/planets/Mercury_symbol.png"));
+        tabsheet.addTab(tab1, "Customer Information");
 
-        Form form = new Form();
-        form.setCaption("Form Caption");
-        form.setDescription("This is a description of the Form that is " +
-                "displayed in the upper part of the form. You normally " +
-                "enter some descriptive text about the form and its " +
-                "use here.");
-        final TextField tf1=new TextField("tf1");
-        final TextField tf2=new TextField("tf2");
-        final TextField tf3=new TextField();
+        final Form form = new Form();
+        form.setImmediate(true);
+        form.setCaption("Customer");
+        form.setDescription("Enter Customer Information.");
+        final TextField tf1=new TextField("Name");
+        final TextField tf2=new TextField("Surname");
+        form.addField("name", tf1);
 
-        form.getLayout().addComponent(tf1);
-        form.addField("name", tf2);
-        form.addField("surname", tf3);
+        form.addField("surname", tf2);
+
+        final ComboBox gender = new ComboBox("Gender");
+        gender.addItem("Male");
+        gender.addItem("Female");
+        form.addField("gender",gender);
+
+        final DateField date = new DateField("Birth Date");
+        date.setDateFormat("yyyy-MM-dd");
+
+        date.setValue(new Date());
+        form.addField("date",date) ;
+
+        final ComboBox city = new ComboBox("City");
+        city.addItem("Istanbul");
+        city.addItem("Ankara");
+        city.addItem("Izmir");
+        city.addItem("Bursa");
+        city.addItem("Adana");
+        city.addItem("Izmit");
+
+        form.addField("city", city);
+
+        form.addField("gender",gender);
+
+        final CheckBox activation = new CheckBox("Activation");
+        activation.setValue(true);
+        form.addField("activation",activation);
 
         final TwinColSelect select =
-                new TwinColSelect("Select Targets to Destroy");
+                new TwinColSelect("Channel");
 
 // Set the column captions (optional)
-        select.setLeftColumnCaption("These are left");
-        select.setRightColumnCaption("These are done for");
+        select.setLeftColumnCaption("Channel List");
+        select.setRightColumnCaption("Channel to be Added");
+
 
 // Put some data in the select
         String channels[] = {"CNN","NBC", "FOX","ABC", "The CW" };
@@ -90,14 +119,9 @@ public class CustomerApp extends UI
         select.setRows(channels.length);
 
 
-        form.setComponentError(new UserError("This is the error indicator of the Form."));
         form.setFooter(new VerticalLayout());
-           System.out.println("bb");
             //asd
-        form.getFooter().addComponent(
-                new Label("This is the footer area of the Form. "+
-                        "You can use any layout here. "+
-                        "This is nice for buttons."));
+
 
 
 // Have a button bar in the footer.
@@ -111,37 +135,69 @@ public class CustomerApp extends UI
 // for the form.
 
 
-        Button okbutton = new Button("OK");
+        Button savebutton = new Button("Save");
+         final UserError error= new UserError("All Fields must be Filled") ;
 
-        okbutton.addClickListener(new Button.ClickListener() {
+        savebutton.addClickListener(new Button.ClickListener() {
             public void buttonClick(ClickEvent event) {
-                DatabaseTools.persist(tf1.getValue(), tf2.getValue(), tf3.getValue(), select.getValue());         System.out.println(tf1.getValue());
+                if((tf1.getValue()==null)||(tf2.getValue()==null)|| (gender.getValue()==null)|| (date.getValue()==null)||(city.getValue()==null)||(select.getValue()==null))  {
+                    System.out.println("NOT FILLED");
+                form.setComponentError(error);
+                }
+                else  {
+                DatabaseTools.persist(tf1.getValue(), tf2.getValue(), gender.getValue().toString(), date.getValue(),city.getValue().toString(),activation.getValue(), select.getValue()); System.out.println(tf1.getValue());
+                form.setComponentError(null);
+                }
+            }
+        });
+
+        Button cancelbutton = new Button("Cancel");
+
+        cancelbutton.addClickListener(new Button.ClickListener() {
+            public void buttonClick(ClickEvent event) {
+                    tf1.setValue("");
+                tf1.setValue("");
+                tf2.setValue("");
+                gender.setValue(null);
+                date.setValue(new Date());
+                city.setValue(null);
+                select.setValue(null);
 
             }
         });
-        okbar.addComponent(okbutton);
-        okbar.setComponentAlignment(okbutton, Alignment.TOP_RIGHT);
-        okbar.addComponent(new Button("Reset"));
-        okbar.addComponent(new Button("Cancel"));
+        okbar.addComponent(savebutton);
+        okbar.setComponentAlignment(savebutton, Alignment.TOP_RIGHT);
+        okbar.addComponent(cancelbutton);
 
         tab1.addComponent(form);
 
-        table.addContainerProperty("ID", Long.class,  null);
+        table.addContainerProperty("Id",  Integer.class,  null);
 
-        table.addContainerProperty("Code", Integer.class,  null);
         table.addContainerProperty("Name",  String.class,  null);
-        //table.addContainerProperty("Year",       Integer.class, null);
+        table.addContainerProperty("Surname",  String.class,  null);
+        table.addContainerProperty("Gender",  String.class,  null);
+        table.addContainerProperty("Birth Date",  String.class,  null);
+        table.addContainerProperty("Birth City",  String.class,  null);
+        table.addContainerProperty("Activation",  String.class,  null);
+        table.addContainerProperty("Channels",  String.class,  null);
 
-        final Button popupButton = new Button("popup");
-        //  popupButton.setVisible(false);
 
 
         showbutton.addClickListener(new Button.ClickListener() {
             public void buttonClick(ClickEvent event) {
+                table.removeAllItems();
                 List<Customer> customers =DatabaseTools.findAll();
                 for(int i=0;i< customers.size();i++){
-                   table.addItem(new Object []{(new Long(1)),Integer.parseInt(customers.get(i).getname()), customers.get(i).getsurname()},new Integer(i));
-                   // (customers.get(i).getStockId())
+                    Collection<Channel> channels;
+                    channels = new HashSet<Channel>(customers.get(i).getChannels());
+                    String channelstring="";
+                    for (Channel c : channels) {
+
+                        channelstring=channelstring+c.getChannelName()+",";
+                    }
+                    channelstring = channelstring.substring(0, channelstring.length()-1);
+                   System.out.println(customers.get(i).getCustomerId());
+                    table.addItem(new Object []{(customers.get(i).getCustomerId()),(customers.get(i).getname()), customers.get(i).getsurname(),customers.get(i).getGender(),customers.get(i).getBirthDate(),customers.get(i).getBirthCity(),customers.get(i).getActivation(),channelstring },new Integer(i));
                 }
 
             }
@@ -158,66 +214,45 @@ public class CustomerApp extends UI
         table.setMultiSelect(false);
         table.setSelectable(true);
 
-        BrowserWindowOpener popupOpener = new BrowserWindowOpener(CustomerApp.class);
-        popupOpener.setFeatures("height=300,width=300");
-        popupOpener.extend(popupButton);
 
-        // Add a parameter
-        popupOpener.setParameter("foo", "bar");
-        // Set a fragment
-        popupOpener.setUriFragment("myfragment");
-
-        final Label content = new Label(
-                "This is a simple Label component inside the popup. You can place any Vaadin components here.");
-        // The PopupView popup will be as large as needed by the content
-        content.setWidth("300px");
-
-        // Construct the PopupView with simple HTML text representing the
-        // minimized view
 
 
         final HashSet<Object> markedRows = new HashSet<Object>();
 
-        final Action ACTION_MARK = new Action("Mark");
-        final Action ACTION_UNMARK = new Action("Unmark");
-        final Action ACTION_LOG = new Action("Save");
-        final Action[] ACTIONS_UNMARKED = new Action[] { ACTION_MARK,
-                ACTION_LOG };
-        final Action[] ACTIONS_MARKED = new Action[] { ACTION_UNMARK,
-                ACTION_LOG };
-
-        table.setColumnHeaders(new String[] { "Country", "Code","mark" });
+        final Action ACTION_EDIT = new Action("Edit");
+        final Action ACTION_DELETE = new Action("Delete");
 
 
-        final Action actionMark = new Action("Mark");
-        final Action actionUnmark = new Action("Unmark");
+
+
+        final Action actionEdit = new Action("Edit");
+        final Action actionDelete = new Action("Delete");
 
 
         table.addActionHandler(new Action.Handler() {
             @Override
             public Action[] getActions(final Object target, final Object sender) {
-                return new Action[] { actionUnmark,actionMark };
+                return new Action[] { actionEdit,actionDelete };
 
             }
 
             @Override
             public void handleAction(final Action action, final Object sender,
                                      final Object target) {
-                if (actionMark == action) {
+                if (actionEdit == action) {
                     markedRows.add(target);
                     Item rowItem = table.getItem(target);
                     String[] row= rowItem.toString().split(" ");
-                    System.out.println(row[1]);
                     popup(row);
 
 
 
 
-                    System.out.println("marked");
-                } else if (actionUnmark == action) {
-                    System.out.println("unmarked");
-
-                    markedRows.remove(target);
+                } else if (actionDelete == action) {
+                    markedRows.add(target);
+                    Item rowItem = table.getItem(target);
+                    String[] row= rowItem.toString().split(" ");
+                    DatabaseTools.delete(row);
                 }
                 table.markAsDirtyRecursive();
 
@@ -227,19 +262,26 @@ public class CustomerApp extends UI
 
 
         tab2.setCaption("List of Customers");
-        tabsheet.addTab(tab2).setIcon(
-                new ThemeResource("img/planets/Venus_symbol.png"));
+        tabsheet.addTab(tab2);
 
 
-        tabsheet.addTab(tab3, "Report",
-                new ThemeResource("img/planets/Mercury_symbol.png"));
+        tabsheet.addTab(tab3, "Report");
 
-        Button reportbutton = new Button("Report");
+
+
+        final ComboBox reportType = new ComboBox("Report Type");
+        reportType.addItem("Male Customers");
+        reportType.addItem("Customers of birth city Istanbul");
+
+        final Form reportform = new Form();
+        reportform.addField("reportType", reportType);
+        tab3.addComponent(reportform);
+        Button reportbutton = new Button("Generate Report");
 
         reportbutton.addClickListener(new Button.ClickListener() {
             public void buttonClick(ClickEvent event) {
                 try {
-                    report();
+                    report(reportType.getValue().toString());
                 } catch (JRException e) {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                 } catch (SQLException e) {
@@ -250,13 +292,20 @@ public class CustomerApp extends UI
             }
         });
         tab3.addComponent(reportbutton);
+        tab3.setImmediate(true);
     }
 
 
-    public void report() throws JRException, SQLException, IOException {
-        /*
-        List<working.Customer> stocks= working.DatabaseTools.findAll();
-        working.CustomTableModel model=new working.CustomTableModel(stocks);
+    public void report(String reportType) throws JRException, SQLException, IOException {
+        if(full)
+            tab3.removeComponent(pdf);
+        working.CustomTableModel model=null;
+        if(reportType.equals("Male Customers")){
+        List<working.Customer> customers= working.DatabaseTools.findMaleCustomers();
+        model=new working.CustomTableModel(customers,"2"); }
+        else if(reportType.equals("Customers of birth city Istanbul"))  {
+            List<working.Customer> customers= working.DatabaseTools.findIstanbulCustomers();
+        model=new working.CustomTableModel(customers,"3"); }
 
         FileOutputStream fos = null;
         File tempFile = null;
@@ -266,13 +315,12 @@ public class CustomerApp extends UI
 
 
 
-            String jrxml = "report4.jrxml";
-            String jrxmlPath = getClass().getClassLoader().getResource(".").getPath() + jrxml;
-            System.out.println("done");
+            String jrxml = "customerreport.jrxml";
+            //String jrxmlPath= "C:/finalbeforetest/lastvers/a/working/src/main/resources/jasperreports/" + jrxml;
+            String jrxmlPath = new File(".").getCanonicalPath()+"/src/main/resources/jasperreports/"+jrxml;
             String jasperCompile= JasperCompileManager.compileReportToFile(jrxmlPath);
             JasperPrint print = JasperFillManager.fillReport(jasperCompile, null, new JRTableModelDataSource(model));
             JasperExportManager.exportReportToPdfStream(print, fos);
-            System.out.println("done2");
 
         }
         catch (IOException e) {
@@ -298,61 +346,25 @@ public class CustomerApp extends UI
 
 
 
-        Embedded pdf = new Embedded("", new FileResource(tempFile));
+        pdf = new Embedded("", new FileResource(tempFile));
         pdf.setMimeType("application/pdf");
-        pdf.setHeight("800");
+       // tab3.set("1000");
+
+       // pdf.setHeight("1000");
+
         pdf.setType(Embedded.TYPE_BROWSER);
         tab3.addComponent(pdf);
         pdf.setSizeFull();
         tab3.setSizeFull();
+         full=true;
 
 
-
-
-      /* try {
-            TemporaryFileDownloadResource resource = new TemporaryFileDownloadResource(getApplication(), downloadFileName, contentType, tempFile);
-            getWindow().open(resource, "_self");
-        }
-        catch (FileNotFoundException e) {
-            logger.error(e.getMessage(), e);
-        }
-
-
-        final JasperReport report = (JasperReport) JRLoader.loadObject(getClass().getResourceAsStream("/report4.jasper"));
-
-          System.out.println("2");
-        final Map paramMap=new HashMap();
-        paramMap.put("CompanyName","My Company Inc.");
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        final Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/customer/?user=root&password=root");
-
-
-        StreamResource.StreamSource source = new StreamResource.StreamSource() {
-            public InputStream getStream() {
-                byte[] b = null;
-                try {
-                    b = JasperRunManager.runReportToPdf(report, paramMap, con);
-                } catch (JRException ex) {
-                    System.out.println(ex);
-                }
-                return new ByteArrayInputStream(b);
-            }
-
-        };
-        System.out.println("done");
-
-        */
     }
 
 
 
     public void notification(){
-        System.out.println("notified");
-        final Window subWindow = new Window("Sub-window");
+        final Window subWindow = new Window("Message");
         VerticalLayout subContent = new VerticalLayout();
         subContent.setMargin(true);
         subWindow.setContent(subContent);
@@ -360,17 +372,14 @@ public class CustomerApp extends UI
         Button ok = new Button("OK");
 
         // Put some components in it
-        subContent.addComponent(new Label("Meatball sub"));
+        subContent.addComponent(new Label("Successfully Completed"));
         subContent.addComponent(ok);
         subWindow.setClosable(false);
 
         ok.addClickListener(new Button.ClickListener() {
             public void buttonClick(ClickEvent event) {
-                System.out.println("1");
                 popup.setPopupVisible(false);
-                System.out.println("2");
                 subWindow.close(); // Close the sub-window
-                System.out.println("3");
             }
         });
 
@@ -378,26 +387,13 @@ public class CustomerApp extends UI
         subWindow.center();
         addWindow(subWindow);
 
+        subWindow.bringToFront();
+
 
     }
 
     public void trayMessage() throws InterruptedException {
-        System.out.println("notified");
-        /*final Window subWindow = new Window("Sub-window");
-        VerticalLayout subContent = new VerticalLayout();
-        subContent.setMargin(true);
-        subWindow.setContent(subContent);
 
-        Button ok = new Button("OK");
-
-        // Put some components in it
-        subContent.addComponent(new Label("Meatball sub"));
-        subContent.addComponent(ok);
-        subWindow.setClosable(false);
-        wait(2000);
-        subWindow.close(); // Close the sub-window
-        subWindow.center();
-        addWindow(subWindow);       */
         Notification notif=new Notification("Refresher Add-on is Active",
 
                 Notification.Type.TRAY_NOTIFICATION);
@@ -406,19 +402,16 @@ public class CustomerApp extends UI
         notif.show(Page.getCurrent());
 
 
-        // Center it in the browser window
 
 
 
     }
     public void popup(String[] row){
-        popup = new PopupView(new working.PopupTextField(row, this));
-        //final PopupView popup = new PopupView(new PopupTextField(row[1]));
+        popup = new PopupView(new PopupWindow(row, this));
+        //final PopupView popup = new PopupView(new PopupWindow(row[1]));
         tab2.addComponent(showbutton);
         tab2.addComponent(popup);
         popup.setHideOnMouseOut(false);
-
-
 
 
         tab2.addComponent(table);
@@ -426,54 +419,7 @@ public class CustomerApp extends UI
 
         popup.setPopupVisible(true);
 
-       /* tf.setAsd(asd);
-        System.out.println("asd in popup" + asd);
-        popup.setVisible(true);
-        popup.setPopupVisible(true); */
 
-
-        // ------
-        // Static content for the minimized view
-        // ------
-
-        // Create the content for the popup
-
-
-
-       /* Window subWindow = new Window("Sub-window");
-        VerticalLayout subContent = new VerticalLayout();
-        subContent.setMargin(true);
-        subWindow.setContent(subContent);
-
-        // Put some components in it
-        subContent.addComponent(new Label("Meatball sub"));
-        subContent.addComponent(new Button("Awlright"));
-
-        // Center it in the browser window
-        subWindow.center();
-
-        // Open it in the UI
-        addWindow(subWindow);
-
-
-        BrowserWindowOpener popupOpener = new BrowserWindowOpener(CustomerApp.class);
-        popupOpener.setFeatures("height=300,width=300");
-
-        // Add a parameter
-        popupOpener.setParameter("foo", "bar");
-
-        // Set a fragment
-        popupOpener.setUriFragment("myfragment");
-        // Have some content for it
-        VerticalLayout content = new VerticalLayout();
-        Label label =
-                new Label("I just popped up to say hi!");
-        label.setSizeUndefined();
-        content.addComponent(label);
-        content.setComponentAlignment(label,
-                Alignment.MIDDLE_CENTER);
-        content.setSizeFull();
-        setContent(content);       */
 
 
     }

@@ -1,6 +1,8 @@
 package working;
 
 import javax.swing.table.AbstractTableModel;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -12,18 +14,31 @@ import java.util.List;
  */
     public class CustomTableModel extends AbstractTableModel
     {
-        private String[] columnNames = {"name", "email", "firstName", "lastName"};
+        private String[] columnNames = {"name", "surname", "gender", "birthCity","birthDate", "channels"};
+        public Object[][] data;
 
-        private Object[][] data = new Object[20][4];
-
-
-        public CustomTableModel(List<Customer> customers)
+        public CustomTableModel(List<Customer> customers, String header)
         {
+             data = new Object[customers.size()][6];
+
             for(int i=0;i< customers.size();i++){
-              /*  data[i][0]=String.valueOf(customers.get(i).getStockId()) ;
-                data[i][1]= customers.get(i).getStockCode() ;
-                data[i][2]= customers.get(i).getStockName() ;
-                data[i][3]="4" ;    */
+                Collection<Channel> channels;
+                channels = new HashSet<Channel>(customers.get(i).getChannels());
+                String channelstring="";
+                for (Channel c : channels) {
+
+                    channelstring=channelstring+c.getChannelName()+",";
+                }
+                channelstring = channelstring.substring(0, channelstring.length()-1);
+
+                data[i][0]=customers.get(i).getname() ;
+                data[i][1]= customers.get(i).getsurname() ;
+                data[i][2]= customers.get(i).getGender() ;
+                data[i][3]= customers.get(i).getBirthCity() ;
+                data[i][4]= customers.get(i).getBirthDate() ;
+
+
+                data[i][5]= channelstring;
 
 
 
@@ -49,5 +64,7 @@ import java.util.List;
         {
             return this.data[rowIndex][columnIndex];
         }
+
+
     }
 

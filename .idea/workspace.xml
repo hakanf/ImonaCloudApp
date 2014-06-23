@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ec94f33-ec2c-48e5-b374-bc4e72a01240" name="Default" comment="" />
+    <list default="true" id="0ec94f33-ec2c-48e5-b374-bc4e72a01240" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/working/PopupWindow.java" />
+      <change type="DELETED" beforePath="C:\finalbeforetest\lastvers\a\working\src\main\java\working\AddCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\finalbeforetest\lastvers\a\working\src\main\java\working\PopupTextField.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/working/CustomTableModel.java" afterPath="$PROJECT_DIR$/src/main/java/working/CustomTableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate/Customer.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate/Customer.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/working/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/working/Customer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/working/CustomerApp.java" afterPath="$PROJECT_DIR$/src/main/java/working/CustomerApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/working/CustomerBo.java" afterPath="$PROJECT_DIR$/src/main/java/working/CustomerBo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/working/CustomerBoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/working/CustomerBoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/working/CustomerDao.java" afterPath="$PROJECT_DIR$/src/main/java/working/CustomerDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/working/CustomerDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/working/CustomerDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/working/DatabaseTools.java" afterPath="$PROJECT_DIR$/src/main/java/working/DatabaseTools.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/working/MyRefreshListener.java" afterPath="$PROJECT_DIR$/src/main/java/working/MyRefreshListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="working.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403445446955" ignored="false" />
+    <file path="/Dummy.txt" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403534591848" ignored="false" />
     <file path="C:/untitled3/.idea/workspace.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403387885166" ignored="false" />
     <file path="/pom.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403442405562" ignored="false" />
     <file path="C:/untitled3/pom.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403364167389" ignored="false" />
     <file path="C:/untitled3/src/main/webapp/VAADIN/themes/mytheme/styles.css" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403359113230" ignored="false" />
-    <file path="/a.dummy" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403442360574" ignored="false" />
+    <file path="/a.dummy" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403520890464" ignored="false" />
     <file path="/MyVaadinUI.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403439021635" ignored="false" />
     <file path="/MyRefreshListener.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403336888223" ignored="false" />
     <file path="C:/untitled3/.idea/vcs.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403347472944" ignored="false" />
@@ -18,13 +33,12 @@
     <file path="C:/working/src/main/java/working/AppWidgetSet.gwt.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403369181946" ignored="false" />
     <file path="C:/hibernate3/.idea/workspace.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403436668271" ignored="false" />
     <file path="/HibernateUtil.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403380839319" ignored="false" />
-    <file path="/hibernate.cfg.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403381589851" ignored="false" />
+    <file path="/hibernate.cfg.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403520755399" ignored="false" />
     <file path="/Stock.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403382388885" ignored="false" />
     <file path="/StockDailyRecord.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403378468592" ignored="false" />
     <file path="C:/gitex/working/src/main/java/CustomerApp/Customer.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403420342507" ignored="false" />
-    <file path="/Customer.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403440730838" ignored="false" />
+    <file path="/Customer.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403509577856" ignored="false" />
     <file path="$PROJECT_DIR$/../../b/working/src/main/java/working/Customer.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403420349970" ignored="false" />
-    <file path="$PROJECT_DIR$/src/main/webapp/VAADIN/themes/mytheme/styles.css" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403425479472" ignored="false" />
     <file path="/Stock.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403427008316" ignored="false" />
     <file path="/Stock.hbm.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403427138524" ignored="false" />
     <file path="$PROJECT_DIR$/../../working/src/main/resources/hibernate/Stock.hbm.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403427108939" ignored="false" />
@@ -33,19 +47,19 @@
     <file path="/ChannelDao.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403428356518" ignored="false" />
     <file path="/ChannelDaoImpl.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403428306063" ignored="false" />
     <file path="/Channel.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403428594018" ignored="false" />
-    <file path="/Channel.hbm.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403433742606" ignored="false" />
-    <file path="/Customer.hbm.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403433497904" ignored="false" />
+    <file path="/Channel.hbm.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403520663151" ignored="false" />
+    <file path="/Customer.hbm.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403509482139" ignored="false" />
     <file path="/Hibernate.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403429180754" ignored="false" />
     <file path="/BeanLocations.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403429193225" ignored="false" />
-    <file path="/DatabaseTools.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403439477258" ignored="false" />
-    <file path="/Channel.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403430989268" ignored="false" />
-    <file path="/CustomerDaoImpl.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403433185652" ignored="false" />
+    <file path="/DatabaseTools.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403534404044" ignored="false" />
+    <file path="/Channel.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403521070379" ignored="false" />
+    <file path="/CustomerDaoImpl.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403529555764" ignored="false" />
     <file path="C:/vaadintry/web/WEB-INF/web.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403432847374" ignored="false" />
     <file path="$PROJECT_DIR$/../../../a/working/src/main/java/working/PopupTextField.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403439892342" ignored="false" />
     <file path="$PROJECT_DIR$/../../../a/working/src/main/java/working/MyRefreshListener.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403439892342" ignored="false" />
     <file path="$PROJECT_DIR$/../../../a/working/src/main/java/working/CustomerApp.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403439892897" ignored="false" />
     <file path="$PROJECT_DIR$/../../../a/working/src/main/java/working/DatabaseTools.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403439913529" ignored="false" />
-    <file path="/fragment.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403440209258" ignored="false" />
+    <file path="/fragment.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403514809445" ignored="false" />
     <file path="$PROJECT_DIR$/../../../a/working/src/main/java/ImanoCloudCustomerApp/CustomerBo.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403440509055" ignored="false" />
     <file path="$PROJECT_DIR$/../../../a/working/src/main/java/ImanoCloudCustomerApp/Channel.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403440509058" ignored="false" />
     <file path="$PROJECT_DIR$/../../../a/working/src/main/java/ImanoCloudCustomerApp/CustomerBoImpl.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403440509055" ignored="false" />
@@ -115,6 +129,18 @@
     <file path="C:/ImonaCloudCustomerApp/src/main/resources/spring/beans/Customer.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403442366897" ignored="false" />
     <file path="C:/ImonaCloudCustomerApp/src/main/resources/spring/beans/Channel.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403442366897" ignored="false" />
     <file path="C:/ImonaCloudCustomerApp/src/main/resources/hibernate.cfg.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403442366897" ignored="false" />
+    <file path="/CustomerApp.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403540324565" ignored="false" />
+    <file path="/PopupTextField.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403533449787" ignored="false" />
+    <file path="C:/hibernatecustomer/src/Channel.hbm.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403520861174" ignored="false" />
+    <file path="C:/hibernatecustomer/src/hibernate.cfg.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403520763306" ignored="false" />
+    <file path="C:/hibernatecustomer/src/Customer.hbm.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403521181098" ignored="false" />
+    <file path="C:/hibernatecustomer/src/Channel.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403521135999" ignored="false" />
+    <file path="/*.regexp" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403521055365" ignored="false" />
+    <file path="C:/hibernatecustomer/src/Customer.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403521216102" ignored="false" />
+    <file path="/CustomTableModel.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403536659847" ignored="false" />
+    <file path="/CustomerBo.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403529401837" ignored="false" />
+    <file path="/CustomerBoImpl.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403529443425" ignored="false" />
+    <file path="/RefreshListener.java" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403538076721" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,44 +204,85 @@
       <file leaf-file-name="DatabaseTools.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/working/DatabaseTools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="68" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
+            <state line="153" column="0" selection-start="4807" selection-end="4807" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerApp.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CustomerBo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerBo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="1" selection-start="362" selection-end="444" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="43" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerApp.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="0" selection-start="4021" selection-end="4021" vertical-scroll-proportion="0.0">
+            <state line="278" column="51" selection-start="9268" selection-end="9268" vertical-scroll-proportion="11.125348">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#692#719#0" expanded="true" />
+                <element signature="e#4234#4947#0" expanded="true" />
+                <element signature="e#4936#4937#0" expanded="true" />
+                <element signature="e#5042#5415#0" expanded="true" />
+                <element signature="e#5404#5405#0" expanded="true" />
+                <element signature="e#6199#7280#0" expanded="true" />
+                <element signature="e#7269#7270#0" expanded="true" />
+                <element signature="e#7526#7534#0" expanded="true" />
+                <element signature="e#9317#10002#0" expanded="true" />
+                <element signature="e#9991#9992#0" expanded="true" />
+                <element signature="e#12854#13067#0" expanded="true" />
+                <element signature="e#13056#13057#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyRefreshListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/working/MyRefreshListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="49" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomTableModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomTableModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="0" selection-start="1910" selection-end="1910" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PopupTextField.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/working/PopupTextField.java">
+      <file leaf-file-name="PopupWindow.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/working/PopupWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="17" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddCustomer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/working/AddCustomer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Channel.hbm.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate/Channel.hbm.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="104" column="58" selection-start="3019" selection-end="3019" vertical-scroll-proportion="-8.16">
+              <folding>
+                <element signature="e#534#561#0" expanded="true" />
+                <element signature="e#3121#3129#0" expanded="true" />
+                <element signature="e#3872#5387#0" expanded="true" />
+                <element signature="e#5374#5375#0" expanded="true" />
+                <element signature="e#5482#7618#0" expanded="true" />
+                <element signature="e#7605#7606#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -223,34 +290,7 @@
       <file leaf-file-name="CustomerDaoImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Customer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/working/Customer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="27" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Channel.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/working/Channel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="62" selection-start="700" selection-end="700" vertical-scroll-proportion="0.043589745">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Channel.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/beans/Channel.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="27" selection-start="305" selection-end="307" vertical-scroll-proportion="0.0">
+            <state line="37" column="5" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -259,7 +299,16 @@
       <file leaf-file-name="CustomerBoImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerBoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0">
+            <state line="39" column="48" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Channel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/working/Channel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="0" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -284,24 +333,34 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/spring/beans/Customer.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/working/ChannelBo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/working/ChannelDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/working/ChannelDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/working/ChannelBoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/database/Hibernate.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/config/BeanLocations.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/beans/Channel.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/working/Channel.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/working/CustomerDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate/Customer.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate/Channel.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/working/MyVaadinUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/working/DatabaseTools.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate/Customer.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/working/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/CustomerBo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/CustomerBoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/CustomerDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/CustomerDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/PopupTextField.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/DatabaseTools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/CustomTableModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/RefreshListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/MyRefreshListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/PopupWindow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/working/CustomerApp.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -511,6 +570,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="jasperreports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="working" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="working" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="hibernate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -555,7 +640,7 @@
     <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../final/working" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -564,9 +649,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Maven.run on jetty">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -605,6 +690,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -631,19 +729,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -750,34 +835,34 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960254" sideWeight="0.2894334" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960254" sideWeight="0.68202764" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960254" sideWeight="0.28878647" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.6830015" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960254" sideWeight="0.67127496" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31804734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960254" sideWeight="0.68202764" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31797236" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -847,58 +932,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="0" selection-end="415" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/database/DataSource.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/database/Hibernate.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="33" selection-start="316" selection-end="318" vertical-scroll-proportion="-3.08">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/beans/Customer.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="29" selection-start="473" selection-end="475" vertical-scroll-proportion="-7.48">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate/Customer.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerBoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -917,45 +953,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/working/PopupTextField.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate/Customer.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/working/AddCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="4021" selection-end="4021" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/working/DatabaseTools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="68" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
+        <state line="16" column="41" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/working/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="27" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
+        <state line="92" column="44" selection-start="2263" selection-end="2263" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/working/Channel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="62" selection-start="700" selection-end="700" vertical-scroll-proportion="0.043589745">
+        <state line="25" column="0" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerBoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="48" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerBo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="1" selection-start="362" selection-end="444" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="43" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="5" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/working/DatabaseTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="0" selection-start="4807" selection-end="4807" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="0" selection-start="1910" selection-end="1910" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/working/MyRefreshListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="49" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/working/PopupWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="58" selection-start="3019" selection-end="3019" vertical-scroll-proportion="-8.16">
+          <folding>
+            <element signature="e#534#561#0" expanded="true" />
+            <element signature="e#3121#3129#0" expanded="true" />
+            <element signature="e#3872#5387#0" expanded="true" />
+            <element signature="e#5374#5375#0" expanded="true" />
+            <element signature="e#5482#7618#0" expanded="true" />
+            <element signature="e#7605#7606#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/working/CustomerApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="278" column="51" selection-start="9268" selection-end="9268" vertical-scroll-proportion="11.125348">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#692#719#0" expanded="true" />
+            <element signature="e#4234#4947#0" expanded="true" />
+            <element signature="e#4936#4937#0" expanded="true" />
+            <element signature="e#5042#5415#0" expanded="true" />
+            <element signature="e#5404#5405#0" expanded="true" />
+            <element signature="e#6199#7280#0" expanded="true" />
+            <element signature="e#7269#7270#0" expanded="true" />
+            <element signature="e#7526#7534#0" expanded="true" />
+            <element signature="e#9317#10002#0" expanded="true" />
+            <element signature="e#9991#9992#0" expanded="true" />
+            <element signature="e#12854#13067#0" expanded="true" />
+            <element signature="e#13056#13057#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

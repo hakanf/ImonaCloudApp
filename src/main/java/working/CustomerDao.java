@@ -16,7 +16,8 @@ public interface CustomerDao {
     void update(Customer customer);
     void delete(Customer customer);
     List<Customer> findAll();
-
+    List<Customer> findMaleCustomers();
+    List<Customer> findIstanbulCustomers();
     Customer findByStockCode(String stockCode);
 
 }

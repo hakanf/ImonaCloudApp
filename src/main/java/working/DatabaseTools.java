@@ -6,6 +6,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.persistence.EntityManager;
 import java.nio.channels.Channels;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -17,43 +19,33 @@ import java.util.*;
  */
 public class DatabaseTools {
 
-    public static void persist   (String field1, String field2, String field3, Object caption){
-        System.out.println("1");
+    public static void persist   (String name, String surname, String gender,Date date,String birthCity,boolean activation, Object caption){
         String a=caption.toString().replace("[","").replace("]","").replace(",","");
         String[] channels= a.split(" ");
-//        System.out.println(channels[0] + "\n"+ channels[1]) ;
 
         Session session = HibernateUtil.getSessionFactory().openSession();
-        System.out.println("2");
 
         session.beginTransaction();
-        System.out.println("3");
 
-       /* ApplicationContext appContext =
-                new ClassPathXmlApplicationContext("spring/config/BeanLocations.xml");
 
-        working.CustomerBo stockBo = (working.CustomerBo)appContext.getBean("stockBo");
-        System.out.println("2");
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        String birthDate = df.format(date);
 
-        /** insert **/
-       /* working.Customer customer = new working.Customer();
-        customer.setStockCode(field1);
-        System.out.println(field1);
-
-        System.out.println(customer.getStockCode());
-
-        customer.setStockName(field2);
-        stockBo.save(customer);
-
-         */
-
-        int range = 10000;
-        Long stockID= Long.valueOf(String.valueOf((int)(Math.random() * range) + 1));
 
         Customer customer = new Customer();
-        //customer.setStockId(stockID);
-        customer.setname("75532");
-        customer.setsurname("cemg22in");
+
+        System.out.println(name+"\n"+surname+"\n"+gender+"\n"+birthDate+"\n"+birthCity+"\n"+activation+"\n");
+
+        customer.setname(name);
+        customer.setsurname(surname);
+        customer.setGender(gender);
+        customer.setBirthDate(birthDate);
+        customer.setBirthCity(birthCity);
+        if(activation)
+        customer.setActivation("active");
+        else
+        customer.setActivation("passive");
+
         session.save(customer);
 
 
@@ -65,22 +57,10 @@ public class DatabaseTools {
 
             session.save(channel);
         }
+
         session.getTransaction().commit();
 
-        /** select **/
-        // Customer stock2 = stockBo.findByStockCode("7668");
-        //System.out.println(stock2.getStockCode());
 
-        /** update **/
-        //stock2.setStockName("HAIO-1");
-        //stockBo.update(stock2);
-        //System.out.println(customer.getStockCode());
-
-
-        /** delete **/
-        //stockBo.delete(stock2);
-
-        System.out.println("Done");
     }
 
     public static List<Customer> findAll   (){
@@ -88,21 +68,96 @@ public class DatabaseTools {
                 new ClassPathXmlApplicationContext("spring/config/BeanLocations.xml");
         CustomerBo customerBo = (CustomerBo)appContext.getBean("customerBo");
         List<Customer> customers = customerBo.find();
-        System.out.println("done1");
-        System.out.println(customers.size());
-        Collection<Channel> channels = new LinkedHashSet<Channel>();
 
-        channels = new HashSet<Channel>(customers.get(0).getChannels());
-
-        for (Channel c : channels) {
-            System.out.println("IMPORTANT" + c.getChannelName());
-        }
-
-               // System.out.println(customers.get(4).getStockCode());
-        for(Customer customer : customers){
-        }
-        System.out.println("showbutton");
         return customers;
 
     }
+    public static List<Customer> findMaleCustomers   (){
+        ApplicationContext appContext =
+                new ClassPathXmlApplicationContext("spring/config/BeanLocations.xml");
+        CustomerBo customerBo = (CustomerBo)appContext.getBean("customerBo");
+        List<Customer> customers = customerBo.findMaleCustomers();
+
+        return customers;
+
+    }
+    public static List<Customer> findIstanbulCustomers   (){
+        ApplicationContext appContext =
+                new ClassPathXmlApplicationContext("spring/config/BeanLocations.xml");
+        CustomerBo customerBo = (CustomerBo)appContext.getBean("customerBo");
+        List<Customer> customers = customerBo.findIstanbulCustomers();
+
+        return customers;
+
+    }
+    public static void update   (String name, String surname, String gender,Date date,String birthCity,boolean activation, Object caption){
+        String a=caption.toString().replace("[","").replace("]","").replace(",","");
+        String[] channels= a.split(" ");
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+
+        session.beginTransaction();
+
+
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        String birthDate = df.format(date);
+
+        Customer customer = new Customer();
+
+
+        customer.setname(name);
+        customer.setsurname(surname);
+        customer.setGender(gender);
+        customer.setBirthDate(birthDate);
+        customer.setBirthCity(birthCity);
+        if(activation)
+            customer.setActivation("active");
+        else
+            customer.setActivation("passive");
+
+        session.update(customer);
+
+
+        for (int i=0;i <channels.length;i++){
+            Channel channel = new Channel();
+            channel.setChannelName(channels[i]);
+            channel.setCustomer(customer);
+            customer.getChannels().add(channel);
+
+            session.update(channel);
+        }
+
+        session.getTransaction().commit();
+    }
+    public static void delete (String[] row)
+    {
+
+        Customer customer = new Customer();
+        customer.setCustomerId(Integer.parseInt(row[0]));
+
+        customer.setname(row[1]);
+        customer.setsurname(row[2]);
+        customer.setGender(row[3]);
+
+
+        customer.setBirthDate(row[4]);
+        customer.setBirthCity(row[5]);
+        customer.setActivation(row[6]);
+
+
+        String[] channels = row[7].split(",");
+        for (int i=0;i <channels.length;i++){
+            Channel channel = new Channel();
+            channel.setChannelName(channels[i]);
+            channel.setCustomer(customer);
+            customer.getChannels().add(channel);
+
+        }
+        ApplicationContext appContext =
+                new ClassPathXmlApplicationContext("spring/config/BeanLocations.xml");
+
+        CustomerBo customerBo = (CustomerBo) appContext.getBean("customerBo");
+
+        customerBo.delete(customer);
+}
 }

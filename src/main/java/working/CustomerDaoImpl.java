@@ -31,6 +31,16 @@ public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao 
 
          return customers;
     }
+    public List<Customer> findMaleCustomers(){
+        List <Customer> customers = getHibernateTemplate().find("from Customer where gender=?","Male");
+
+        return customers;
+    }
+    public List<Customer> findIstanbulCustomers(){
+        List <Customer> customers = getHibernateTemplate().find("from Customer where birthCity=? ","Istanbul");
+
+        return customers;
+    }
 
     public Customer findByStockCode(String stockCode){
         List list = getHibernateTemplate().find(
