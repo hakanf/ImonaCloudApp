@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ec94f33-ec2c-48e5-b374-bc4e72a01240" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="working.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403542100092" ignored="false" />
     <file path="C:/untitled3/.idea/workspace.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403387885166" ignored="false" />
-    <file path="/pom.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403442405562" ignored="false" />
+    <file path="/pom.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403546418976" ignored="false" />
     <file path="C:/untitled3/pom.xml" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403364167389" ignored="false" />
     <file path="C:/untitled3/src/main/webapp/VAADIN/themes/mytheme/styles.css" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403359113230" ignored="false" />
     <file path="/a.dummy" changelist="0ec94f33-ec2c-48e5-b374-bc4e72a01240" time="1403520890464" ignored="false" />
@@ -229,7 +229,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="47" selection-start="11131" selection-end="11131" vertical-scroll-proportion="3.0306406">
+            <state line="87" column="46" selection-start="2809" selection-end="2809" vertical-scroll-proportion="0.33147633">
               <folding />
             </state>
           </provider>
@@ -299,7 +299,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate/Channel.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/working/MyVaadinUI.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate/Customer.hbm.xml" />
@@ -315,6 +314,7 @@
         <option value="$PROJECT_DIR$/src/main/java/working/MyRefreshListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/working/PopupWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/working/CustomerApp.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -1013,7 +1013,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="47" selection-start="11131" selection-end="11131" vertical-scroll-proportion="3.0306406">
+        <state line="87" column="46" selection-start="2809" selection-end="2809" vertical-scroll-proportion="0.33147633">
           <folding />
         </state>
       </provider>
